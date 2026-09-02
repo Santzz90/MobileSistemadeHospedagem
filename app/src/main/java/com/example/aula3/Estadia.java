@@ -5,19 +5,36 @@ public class Estadia {
     private int qtdDiaria;
 
     private double valorDiaria;
-    private  String qtdHospedes;
+    private int qtdHospedes;
     private  String tipoAcomodacao;
 
-    public Estadia(String nome, int qtdDiaria, double valorDiaria, String tipoAcomodacao ) {
+    public Estadia(String nome, int qtdDiaria, double valorDiaria, String tipoAcomodacao, int qtdHospedes ) {
         this.NomeHospede = nome;
         this.qtdDiaria = qtdDiaria;
         this.valorDiaria = valorDiaria;
         this.tipoAcomodacao = tipoAcomodacao;
-
+        this.qtdHospedes = qtdHospedes;
         // TODO CRIAR METODO PARA CALCULO DA ESTADIA!
     }// fim construtor
 
+    public double calcularTotalEstadia(){
+        double valorBase = this.valorDiaria * this.qtdDiaria;
+        double adicional = 0.0;
+        String tipo = this.tipoAcomodacao != null ? this.tipoAcomodacao : "";
+        if (tipo.equalsIgnoreCase("Luxo")){
+            adicional = valorBase *0.20;
 
+        }else if (tipo.equalsIgnoreCase("Suite")){
+            adicional = valorBase * 0.35;
+        }
+
+        double taxaExcedente =0.0;
+        if (this.qtdHospedes > 2 ){
+            int hospedesExcedentes = this.qtdHospedes - 2;
+            taxaExcedente = hospedesExcedentes *50.0 *this.qtdDiaria;
+        }
+            return valorBase + adicional + taxaExcedente;
+    }
 
 
     // botao -> direito -> getter and setters
@@ -28,6 +45,14 @@ public class Estadia {
 
     public void setNomeHospede(String nomeHospede) {
         this.NomeHospede = nomeHospede;
+    }
+
+    public int getQtdHospedes(){
+        return qtdHospedes;
+    }
+    public void setQtdHospedes(int qtdHospedes) {
+        this.qtdHospedes = qtdHospedes;
+
     }
 
     public int getQtdDiaria() {
