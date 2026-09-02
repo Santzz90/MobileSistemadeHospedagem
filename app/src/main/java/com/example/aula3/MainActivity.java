@@ -30,14 +30,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        idTipoAcomodacao = findViewById(R.id.idTipoAcomodacao);
-        idNomeHospede = findViewById(R.id.idNomeHospede);
-        idQtdDiarias = findViewById(R.id.editTextNumber);
-        idValorDiaria = findViewById(R.id.editTextNumberDecimal);
-        idQtdHospedes = findViewById(R.id.editTextNumber2);
 
+        idTipoAcomodacao = findViewById(R.id.idTipoAcomodacao); // ok
+        idNomeHospede = findViewById(R.id.idNomeHospede); // ok
+
+        idQtdDiarias = findViewById(R.id.idQtdDiarias);// ok
+        idValorDiaria = findViewById(R.id.idValorDiaria);// ok
+        idQtdHospedes = findViewById(R.id.idQtdHospedes); // ok
+        // TODO NAO ACERTEI O VINCULO DOS BOTÕES
     }// fim metodo
-
     public void calcularValorEstadia (View view) {
         try {  int qtdDiarias = Integer.parseInt(idQtdDiarias.getText().toString());
             double valorDiaria = Double.parseDouble(idValorDiaria.getText().toString());

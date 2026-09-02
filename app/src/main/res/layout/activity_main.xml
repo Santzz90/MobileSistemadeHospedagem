@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/idQtdHospedes" />
 
     <EditText
         android:id="@+id/idTipoAcomodacao"
@@ -42,18 +42,18 @@
         app:layout_constraintTop_toBottomOf="@+id/idNomeHospede" />
 
     <EditText
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/idQtdHospedes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumberDecimal"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        app:layout_constraintEnd_toEndOf="@+id/idValorDiaria"
+        app:layout_constraintStart_toStartOf="@+id/idValorDiaria"
+        app:layout_constraintTop_toBottomOf="@+id/idValorDiaria" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/idQtdDiarias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -65,15 +65,16 @@
         app:layout_constraintTop_toBottomOf="@+id/idNomeHospede" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/idValorDiaria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Valor diária"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintEnd_toEndOf="@+id/idQtdDiarias"
+        app:layout_constraintStart_toStartOf="@+id/idQtdDiarias"
+        app:layout_constraintTop_toBottomOf="@+id/idQtdDiarias"
+        />
 
     <EditText
         android:id="@+id/idNomeHospede"
